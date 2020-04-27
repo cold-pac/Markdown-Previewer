@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  background: yellowgreen;
+  background: rgb(168, 195, 117);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 body {
@@ -32,20 +32,19 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 .headBar span {
   width: 45%;
   text-align: right;
 }
 .headBar span:nth-child(1) {
-  padding: 0.7%;
   text-align: left;
 }
 .headBar span:nth-child(2) {
-  padding: 0.7%;
 }
 svg:hover {
-  color: yellowgreen;
+  color: rgb(168, 195, 117);;
 }
 #editor {
   height: 95%;
