@@ -23,7 +23,11 @@ _make a phrase italic_  **make a phrase bold** **_bold and italic_**
 > Blockquotes  
 > place a caret character on each line of the blockquote
 
-\`code\`
+\`inline code\` 
+\`\`\`
+code 
+block
+\`\`\`
 
 * unordered
   * two spaces for indent
