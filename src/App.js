@@ -16,7 +16,7 @@ A quick tutorial:
 
 _make a phrase italic_  **make a phrase bold** **_bold and italic_**
 
-[Links!](www.cold-pac.github.io)
+[Links!](https://www.cold-pac.github.io)
 
 ![Images](https://cold-pac.github.io/files/favicon-16x16.png)
 
