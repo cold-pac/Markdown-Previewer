@@ -13,11 +13,8 @@ A quick tutorial:
 
 # Header 1
 ## Header 2
-### Header 3
 
-_make a phrase italic_  
-**make a phrase bold**  
-**_bold and italic_**
+_make a phrase italic_  **make a phrase bold** **_bold and italic_**
 
 [Links!](www.cold-pac.github.io)
 
@@ -25,6 +22,8 @@ _make a phrase italic_
 
 > Blockquotes  
 > place a caret character on each line of the blockquote
+
+\`code\`
 
 * unordered
   * two spaces for indent
