@@ -23,7 +23,7 @@ _make a phrase italic_
 
 ![Images](https://cold-pac.github.io/files/favicon-16x16.png)
 
-> Blockquotes
+> Blockquotes  
 > place a caret character on each line of the blockquote
 
 * unordered
