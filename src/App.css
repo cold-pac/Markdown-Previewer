@@ -51,7 +51,6 @@ body {
 .headBar span:nth-child(2) {
 }
 svg:hover {
-  color: rgb(168, 195, 117);
 }
 #editor {
   height: 95%;
@@ -66,4 +65,22 @@ svg:hover {
   padding-top: 0.8%;
   height: 94.2%;
   overflow: auto;
+}
+@media(orientation:portrait) {
+  #master {
+    flex-direction: column;
+  }
+  .container {
+    width: 95%;
+    height: 45%;
+  }
+  .headBar {
+    height: 10%;
+  }
+  #editor {
+    height: 90%;
+  }
+  #preview {
+    height: 89.2%;
+  }
 }
