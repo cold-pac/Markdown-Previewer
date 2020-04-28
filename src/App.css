@@ -33,6 +33,13 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  cursor: grab;
+}
+.headBar:active {
+  cursor: grabbing;
+}
+.headBar:hover {
+  color: rgb(168, 195, 117);
 }
 .headBar span {
   width: 45%;
@@ -44,7 +51,7 @@ body {
 .headBar span:nth-child(2) {
 }
 svg:hover {
-  color: rgb(168, 195, 117);;
+  color: rgb(168, 195, 117);
 }
 #editor {
   height: 95%;

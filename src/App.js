@@ -4,6 +4,7 @@ import './App.css';
 import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowsAlt } from '@fortawesome/free-solid-svg-icons';
+import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same time
 
 
 const startingText = 
@@ -42,23 +43,36 @@ use 2 spaces after each newline to get soft breaks
 
 function App() {
   const [input, setInput] = useState(startingText);
+  const [draggable, setDraggable] = useState(false);
 
   const handleChange = (event) => {
     setInput(event.target.value);
   }
 
+  const mainMouseOver = () => {
+    setDraggable(true);
+  }
+
+  const mainMouseOut = () => {
+    setDraggable(false);
+  }
+
   return (
    <div id = "master">
-      <div id = "editorContainer" className = "container">
-        <div className = "headBar"><span>Editor</span> <span><FontAwesomeIcon icon={faArrowsAlt}/></span></div>
-        <textarea value = {input} onChange = {handleChange} id = "editor"></textarea>
-      </div>
-      <div id = "previewContainer" className = "container">
-        <div className = "headBar"><span>Previewer</span><span><FontAwesomeIcon icon={faArrowsAlt}/></span></div>
-        <div id = "preview">
-          <ReactMarkdown source = {input} /> 
+      <Draggable disabled = {draggable}>
+        <div id = "editorContainer" className = "container">
+          <div className = "headBar"><span>Editor</span><span><FontAwesomeIcon icon={faArrowsAlt}/></span></div>
+          <textarea value = {input} onChange = {handleChange} onMouseOver = {mainMouseOver} onMouseOut = {mainMouseOut} id = "editor"></textarea>
         </div>
-      </div>
+      </Draggable>
+      <Draggable disabled = {draggable}>
+        <div id = "previewContainer" className = "container">
+          <div className = "headBar"><span>Previewer</span><span><FontAwesomeIcon icon={faArrowsAlt}/></span></div>
+          <div id = "preview" onMouseOver = {mainMouseOver} onMouseOut = {mainMouseOut}>
+            <ReactMarkdown source = {input} /> 
+          </div>
+        </div>
+      </Draggable>
    </div>
    );
 }
